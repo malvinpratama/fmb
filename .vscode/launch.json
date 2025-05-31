@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FMB staging",
+            "request": "launch",
+            "type": "dart",
+            "preLaunchTask": "Setup Package Name Staging",
+            "flutterMode": "debug",
+            "args": ["--dart-define-from-file=configs/env/env.staging.json"]
+        },
+        {
+            "name": "FMB production",
+            "request": "launch",
+            "type": "dart",
+            "preLaunchTask": "Setup Package Name Production",
+            "flutterMode": "debug",
+            "args": ["--dart-define-from-file=configs/env/env.json"]
+        },
+    ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // {
+    //     "label": "Setup Package Google Services Staging",
+    //     "type": "shell",
+    //     // Windows Based Need Change for Linux or Mac
+    //     "command": "copy",
+    //     "args": [
+    //         "${workspaceFolder}\\config\\google_services\\staging.json",
+    //         "${workspaceFolder}\\android\\app\\google-services.json"
+    //     ]
+    // },
+
+    // {
+    //     "label": "Setup Package Google Services Production",
+    //     "type": "shell",
+    //     // Windows Based Need Change for Linux or Mac
+    //     "command": "copy",
+    //     "args": [
+    //         "${workspaceFolder}\\config\\google_services\\production.json",
+    //         "${workspaceFolder}\\android\\app\\google-services.json"
+    //     ]
+    // },
+    {
+      "label": "Clean Build Runner",
+      "type": "shell",
+      "command": "dart run build_runner clean"
+    },
+    {
+      "label": "Build Build Runner",
+      "type": "shell",
+      "command": "dart run build_runner build --delete-conflicting-outputs"
+    },
+    {
+      "label": "Setup Locale",
+      "type": "shell",
+      "command": "dart run bin/generate.dart -S assets/translations -f keys -O lib/src/utils -o locale_keys.g.dart"
+    },
+    {
+      "label": "Setup Package Name Staging",
+      "type": "shell",
+      "command": "dart run package_rename --flavor=staging",
+      "dependsOn": [
+        // "Setup Package Google Services Staging",
+        "Clean Build Runner",
+        "Build Build Runner",
+        "Setup Locale"
+      ],
+      "dependsOrder": "sequence"
+    },
+    {
+      "label": "Setup Package Name Production",
+      "type": "shell",
+      "command": "dart run package_rename --flavor=production",
+      "dependsOn": [
+        // "Setup Package Google Services Production",
+        "Clean Build Runner",
+        "Build Build Runner",
+        "Setup Locale"
+      ],
+      "dependsOrder": "sequence"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+package_rename_config-production:
+  android:
+    app_name: FMB
+    package_name: id.synapsis.fmb
+package_rename_config-staging:
+  android:
+    app_name: FMB Staging
+    package_name: id.synapsis.fmb.staging

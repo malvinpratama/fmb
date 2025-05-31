@@ -1,0 +1,26 @@
+{
+  "installationWizard": "Panduan Instalasi",
+  "deviceMustBeRegisteredBeforeCanBeUsed": "Perangkat ini harus didaftarkan terlebih dahulu sebelum digunakan",
+  "pleaseWait": "Harap tunggu",
+  "weTriedToInstallYourDevice": "Kami sedang mencoba menginstal perangkat Anda",
+  "ping": "PING",
+  "serialNumber": "Serial Number",
+  "connexNode": "CONNEX Node",
+  "version": "Versi",
+  "yourSerialNumber": "Nomor seri Anda",
+  "waitingForActivation": "Menunggu aktivasi...",
+  "failedToRegisterDevice": "Gagal mendaftarkan perangkat",
+  "failedToFetchDeviceInformation": "Gagal mengambil informasi perangkat",
+  "loginByCode": "Masuk Menggunakan Kode",
+  "enterYourNIK": "Masukkan NIK Anda",
+  "enterNIK": "Masukkan NIK",
+  "submit": "Kirim",
+  "cantFindYourNIK": "Tidak dapat menemukan NIK Anda",
+  "internalServerError": "Kesalahan pada server",
+  "welcomeBack": "Selamat datang kembali",
+  "emergency": "DARURAT",
+  "breakDown": "MOGOK",
+  "activity": "Aktifitas",
+  "endActivity": "Akhiri Aktifitas"
+
+}
